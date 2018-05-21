@@ -14,7 +14,7 @@
         <CategoryID>3</CategoryID>
         <CategoryName>Confections</CategoryName>
         <Description>Desserts, candies, sweetbreads</Description>
-    </Categories>
+    </Categories> 
     <Categories>
         <CategoryID>4</CategoryID>
         <CategoryName>Dairy Products</CategoryName>

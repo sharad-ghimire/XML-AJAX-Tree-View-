@@ -3,7 +3,7 @@
     <Products>
         <ProductID>1</ProductID>
         <ProductName>Chai</ProductName>
-        <CategoryID>1</CategoryID>
+        <CategoryID>1</CategoryID> 
         <QuantityPerUnit>10 boxes x 20 bags</QuantityPerUnit>
         <UnitPrice>18</UnitPrice>
     </Products>

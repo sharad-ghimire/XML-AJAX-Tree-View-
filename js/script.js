@@ -1,6 +1,18 @@
+//Arrays to store the values of categories
+var categoryID = [];
+var categoryName = [];
+var categoryDescription = [];
+
+//Arrays to stor values of product
+var productID = [];
+var productName = [];
+var productCatID = [];
+var quantityPerUnit = [];
+var unitPrice = [];
+
 $(document).ready(function() {
     loadData();
-
+    console.log(productName);
 });
 
 
@@ -10,37 +22,41 @@ function loadData() {
         dataType: 'xml',
         success: function(data) {
             $(data).find('CategoriesRoot Categories').each(function(){
-                var catt ="<li> ID: "+ $(this).find('CategoryID').text()+'</li>';
-                catt += "<li> CategoryName: "+ $(this).find('CategoryName').text()+'</li>';
-                catt += "<li> Description: "+ $(this).find('Description').text()+'</li>';
-                $('.cat').append(catt);
+                categoryID.push($(this).find('CategoryID').text());
+                categoryName.push($(this).find('CategoryName').text());
+                categoryDescription.push($(this).find('Description').text());
+
             });
         }
     });
+    
     $.ajax({
         url: 'xml/products.xml',
         dataType: 'xml',
         success: function(data) {
             $(data).find('ProductsRoot Products').each(function(){
-                var info ="<li> ID: "+ $(this).find('ProductID').text()+'</li>';
-                info += "<li> Product Name: "+ $(this).find('ProductName').text()+'</li>';
-                info += "<li> CategoryID: "+ $(this).find('CategoryID').text()+'</li>';
-                info += "<li> Qunatity Per Unit: "+ $(this).find('QuantityPerUnit').text()+'</li>';
-                info += "<li> Unit Price: "+ $(this).find('UnitPrice').text()+'</li>';
-                $('.pro').append(info);
+                productID.push($(this).find('ProductID').text());
+                productName.push($(this).find('ProductName').text());
+                productCatID.push($(this).find('CategoryID').text());
+                quantityPerUnit.push($(this).find('QuantityPerUnit').text());
+                unitPrice.push($(this).find('UnitPrice').text());
             });
         }
     })
 }
 
-function tree() {
+
+function xmlDomAppend() {
+    
+
+
+
 
 }
 
 
-
-
 function displayCatDesp() {
+
 
 }
 
