@@ -20,7 +20,7 @@
         <CategoryName>Dairy Products</CategoryName>
         <Description>Cheeses</Description>
     </Categories>
-    <Categories>
+    <Categories> 
         <CategoryID>5</CategoryID>
         <CategoryName>Grains/Cereals</CategoryName>
         <Description>Breads, crackers, pasta, and cereal</Description>
